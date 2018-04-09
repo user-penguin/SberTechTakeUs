@@ -81,7 +81,7 @@
           <option value = "55">Харцызова Евгения Павловна</option>
           <option value = "56">Шипунова Мария Валерьевна</option>
         </select>
-        <input class="button15" name="probability" type="text" placeholder="Введите вероятность">
+        <input class="button15" name="probability" type="text" placeholder="Введите вероятность" required>
         <input class = "button15" type="submit" value="Отправить" style="width:140px; height: 50px" />
         <br><br>
       </center>
