@@ -3,7 +3,6 @@ package logic;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.net.URLDecoder;
 import java.util.ArrayList;
 
 /**
@@ -22,13 +21,16 @@ public class Starter {
         ClassLoader loader = Starter.class.getClassLoader();
         URL path = loader.getResource("logic");
         String deleting = "file:";
+
         String toExcel = path.toString().replace(deleting, "");
+        String deleting2 = "logic" + File.separator;
+        toExcel = toExcel.replace(deleting2, "");
 
 
 
-        files[0] = toExcel + File.separator + "res" + File.separator + "15-1-18" + File.separator + name + ".xlsx";
-        files[1] = toExcel + File.separator + "res" + File.separator + "22-1-18" + File.separator + name + ".xlsx";
-        files[2] = toExcel + File.separator + "res" + File.separator + "29-1-1" + File.separator  + name + ".xlsx";
+        files[0] = toExcel + "15-1-18" + File.separator + name + ".xlsx";
+        files[1] = toExcel + "22-1-18" + File.separator + name + ".xlsx";
+        files[2] = toExcel + "29-1-18" + File.separator + name + ".xlsx";
 
         Parser.parse(files, person);
 
